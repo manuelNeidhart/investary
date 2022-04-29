@@ -6,8 +6,6 @@
 //
 
 import UIKit
-import *
-
 class ViewController: UIViewController {
 
     @IBAction func firstSegueButton(_ sender: Any) {
@@ -16,13 +14,6 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
             super.viewDidLoad()
         }
-    
-    let storyboard1 = UIStoryboard(name: "Main", bundle: nil)
-    let nextVC = storyboard.instantiateViewController(withIdentifier: "mainPageViewController") as! NextVCClass
-    nextVC.modalPresentationStyle = .fullScreen
-    self.present(nextVC, animated: true)
-    
-    
 }
     
 
