@@ -23,7 +23,7 @@ class ViewController: UIViewController {
             
             if let result = result {
                 print(result)
-                testLabel.text = result.name!
+                testLabel.text = result.name! + " " + result.skillLevel!
             }
             else {
                 print("Failed to parse")
