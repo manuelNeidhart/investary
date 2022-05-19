@@ -20,6 +20,9 @@
 		07BF114227DB3BCF0050A318 /* background1.png in Resources */ = {isa = PBXBuildFile; fileRef = 07BF114127DB3BCF0050A318 /* background1.png */; };
 		07BF114427DB3C1A0050A318 /* background2.png in Resources */ = {isa = PBXBuildFile; fileRef = 07BF114327DB3C1A0050A318 /* background2.png */; };
 		07BF114827DB3F480050A318 /* RoundedCornerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BF114727DB3F480050A318 /* RoundedCornerView.swift */; };
+		79C40F0F2836C9D10058B41B /* userService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C40F0E2836C9D10058B41B /* userService.swift */; };
+		79C40F112836CAC90058B41B /* json in Resources */ = {isa = PBXBuildFile; fileRef = 79C40F102836CAC90058B41B /* json */; };
+		79C40F132836CBBA0058B41B /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C40F122836CBBA0058B41B /* ProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +64,9 @@
 		07BF114127DB3BCF0050A318 /* background1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background1.png; sourceTree = "<group>"; };
 		07BF114327DB3C1A0050A318 /* background2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background2.png; sourceTree = "<group>"; };
 		07BF114727DB3F480050A318 /* RoundedCornerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCornerView.swift; sourceTree = "<group>"; };
+		79C40F0E2836C9D10058B41B /* userService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = userService.swift; sourceTree = "<group>"; };
+		79C40F102836CAC90058B41B /* json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = json; sourceTree = SOURCE_ROOT; };
+		79C40F122836CBBA0058B41B /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +117,8 @@
 		0722678927DB3106004E1895 /* investary */ = {
 			isa = PBXGroup;
 			children = (
+				79C40F102836CAC90058B41B /* json */,
+				79C40F0D2836C9820058B41B /* services */,
 				0709308E27F5827C00C8FDD7 /* memoji-2.png */,
 				07BF114127DB3BCF0050A318 /* background1.png */,
 				07BF114327DB3C1A0050A318 /* background2.png */,
@@ -125,6 +133,7 @@
 				0722679527DB3108004E1895 /* LaunchScreen.storyboard */,
 				0722679827DB3108004E1895 /* Info.plist */,
 				07962B4B27F6DC1300716F3A /* CourseViewController.swift */,
+				79C40F122836CBBA0058B41B /* ProfileViewController.swift */,
 			);
 			path = investary;
 			sourceTree = "<group>";
@@ -145,6 +154,14 @@
 				072267AE27DB310A004E1895 /* Info.plist */,
 			);
 			path = investaryUITests;
+			sourceTree = "<group>";
+		};
+		79C40F0D2836C9820058B41B /* services */ = {
+			isa = PBXGroup;
+			children = (
+				79C40F0E2836C9D10058B41B /* userService.swift */,
+			);
+			path = services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -250,6 +267,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79C40F112836CAC90058B41B /* json in Resources */,
 				07BF113E27DB3A2A0050A318 /* Main.storyboard in Resources */,
 				07BF114427DB3C1A0050A318 /* background2.png in Resources */,
 				07BF114227DB3BCF0050A318 /* background1.png in Resources */,
@@ -282,7 +300,9 @@
 				0722678F27DB3106004E1895 /* ViewController.swift in Sources */,
 				074496A827EC60D700F0BC12 /* RoundedButton.swift in Sources */,
 				0722678B27DB3106004E1895 /* AppDelegate.swift in Sources */,
+				79C40F0F2836C9D10058B41B /* userService.swift in Sources */,
 				0722678D27DB3106004E1895 /* SceneDelegate.swift in Sources */,
+				79C40F132836CBBA0058B41B /* ProfileViewController.swift in Sources */,
 				07BF114827DB3F480050A318 /* RoundedCornerView.swift in Sources */,
 				07962B4C27F6DC1300716F3A /* CourseViewController.swift in Sources */,
 			);
@@ -461,6 +481,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8RC937A8S8;
 				INFOPLIST_FILE = investary/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -479,6 +500,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8RC937A8S8;
 				INFOPLIST_FILE = investary/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
