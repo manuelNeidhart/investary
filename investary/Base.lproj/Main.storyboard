@@ -307,13 +307,17 @@
                                 <rect key="frame" x="0.0" y="101" width="414" height="805"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gun-1y-rmU">
-                                        <rect key="frame" x="153" y="100" width="108" height="39"/>
+                                        <rect key="frame" x="8" y="100" width="398" height="39"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="398" id="jcZ-S6-SOw"/>
+                                            <constraint firstAttribute="height" constant="39" id="yqY-E3-uIO"/>
+                                        </constraints>
                                         <attributedString key="attributedText">
                                             <fragment content="STOCK">
                                                 <attributes>
                                                     <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <font key="NSFont" size="30" name="Futura-Bold"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                 </attributes>
                                             </fragment>
                                         </attributedString>
@@ -352,18 +356,47 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pq0-yo-nsK" customClass="RoundedButton" customModule="investary" customModuleProvider="target">
+                                        <rect key="frame" x="119" y="616" width="176" height="42"/>
+                                        <color key="backgroundColor" red="0.30196736670000002" green="0.37908663399999998" blue="0.82366227609999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="42" id="nNi-WX-etl"/>
+                                            <constraint firstAttribute="width" constant="176" id="rKD-b8-gQo"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="23"/>
+                                        <size key="titleShadowOffset" width="20" height="20"/>
+                                        <state key="normal" title="listen">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="titleShadowColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="16"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="0.30196736670000002" green="0.37908663399999998" blue="0.82366227609999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="listenButton:" destination="mow-P0-QE8" eventType="touchUpInside" id="RQp-XN-7HN"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="jk4-u5-fjB" secondAttribute="trailing" constant="34" id="82b-zO-brW"/>
                                     <constraint firstAttribute="bottom" secondItem="s6Y-y9-36O" secondAttribute="bottom" constant="97" id="AjR-hM-pA1"/>
-                                    <constraint firstItem="gun-1y-rmU" firstAttribute="leading" secondItem="TxH-BC-MEK" secondAttribute="leading" constant="153" id="D1B-6u-a7T"/>
                                     <constraint firstItem="jk4-u5-fjB" firstAttribute="leading" secondItem="TxH-BC-MEK" secondAttribute="leading" constant="34" id="Dbq-vx-sgM"/>
+                                    <constraint firstItem="s6Y-y9-36O" firstAttribute="top" secondItem="Pq0-yo-nsK" secondAttribute="bottom" constant="8" id="JOB-xf-CZs"/>
                                     <constraint firstAttribute="bottom" secondItem="jk4-u5-fjB" secondAttribute="bottom" constant="191" id="KZB-1m-ip7"/>
                                     <constraint firstItem="s6Y-y9-36O" firstAttribute="leading" secondItem="TxH-BC-MEK" secondAttribute="leading" constant="119" id="Syz-S8-65U"/>
-                                    <constraint firstItem="jk4-u5-fjB" firstAttribute="top" secondItem="gun-1y-rmU" secondAttribute="bottom" constant="46" id="gmU-hl-ELK"/>
+                                    <constraint firstItem="gun-1y-rmU" firstAttribute="leading" secondItem="TxH-BC-MEK" secondAttribute="leading" constant="8" id="Zof-8l-r0F"/>
                                     <constraint firstItem="jk4-u5-fjB" firstAttribute="top" secondItem="TxH-BC-MEK" secondAttribute="top" constant="185" id="kaz-Ou-Oy5"/>
-                                    <constraint firstAttribute="trailing" secondItem="gun-1y-rmU" secondAttribute="trailing" constant="153" id="vTx-Rd-rs0"/>
+                                    <constraint firstItem="gun-1y-rmU" firstAttribute="top" secondItem="TxH-BC-MEK" secondAttribute="top" constant="100" id="qhZ-jc-wIB"/>
+                                    <constraint firstItem="Pq0-yo-nsK" firstAttribute="leading" secondItem="TxH-BC-MEK" secondAttribute="leading" constant="119" id="zNw-pI-257"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -383,10 +416,14 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="sxR-MB-8KX"/>
+                    <connections>
+                        <outlet property="courseText" destination="jk4-u5-fjB" id="2Cm-Rg-ChY"/>
+                        <outlet property="wordNameLabel" destination="gun-1y-rmU" id="PWF-eN-vFX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QfU-JB-CuJ" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1363.768115942029" y="2757.5892857142858"/>
+            <point key="canvasLocation" x="1362.3188405797102" y="2757.5892857142858"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="RBP-RV-X0W">
@@ -581,6 +618,7 @@
                             <constraint firstAttribute="bottom" secondItem="ofJ-Zr-oHI" secondAttribute="bottom" constant="-10" id="tXm-gE-342"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="1gq-f3-wYs"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="246-jW-HuE" sceneMemberID="firstResponder"/>
             </objects>
@@ -1315,7 +1353,7 @@
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title=" "/>
                                                 <connections>
-                                                    <segue destination="td0-YI-B3E" kind="show" id="qSl-NH-RaR"/>
+                                                    <segue destination="mow-P0-QE8" kind="show" id="VD7-cf-8dU"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -1385,7 +1423,7 @@
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title=" "/>
                                                 <connections>
-                                                    <segue destination="mow-P0-QE8" kind="show" id="s7Q-nH-cyP"/>
+                                                    <segue destination="td0-YI-B3E" kind="show" id="TYQ-nF-Jfd"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -1829,6 +1867,9 @@
     <designables>
         <designable name="Nwj-Tc-wW3">
             <size key="intrinsicContentSize" width="65" height="36"/>
+        </designable>
+        <designable name="Pq0-yo-nsK">
+            <size key="intrinsicContentSize" width="53" height="42"/>
         </designable>
         <designable name="Xob-lu-Emq">
             <size key="intrinsicContentSize" width="65" height="36"/>
