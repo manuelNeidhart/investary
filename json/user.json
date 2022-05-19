@@ -1,5 +1,5 @@
 {
-  "name": "JohnDoe",
+  "name": "John Doe",
   "skillLevel": "Beginner",
   "avatar": "../images/memoji-2.png",
   "courses": [
@@ -17,16 +17,11 @@
   "dictionary": {
     "dictionaryProgress": 4    
   },
-  "quizzes": [
+  "quiz":
     {
-      "quizId": 1,
-      "quizName": "Beginner Quiz",
-      "quizProgress": 9
-    },
-    {
-      "quizId": 2,
-      "quizName": "Expert Quiz",
-      "quizProgress": 2
+      "currentQuizId": 2,
+      "quizName": "Second Quiz",
+      "quizProgress": 1
     }
-  ]
+  
 }
