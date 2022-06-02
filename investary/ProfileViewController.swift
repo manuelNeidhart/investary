@@ -8,7 +8,7 @@
 import UIKit
 
 class ProfileViewController: UIViewController {
-
+    
     
     @IBOutlet weak var libraryLevelLabel: UILabel!
     @IBOutlet weak var quizLevelLabel: UILabel!
@@ -18,19 +18,21 @@ class ProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("ViewDidLoad")
-        parseJSON() { (profiles) -> () in
-            self.nameLabel.text? = profiles.name!
-            self.skillLevelLabel.text? = profiles.skillLevel!
-            self.courseLevelLabel.text? = profiles.courses![0].courseProgress!.description + "%"
-            self.quizLevelLabel.text? = profiles.quiz!.quizProgress!.description + "%"
-            self.libraryLevelLabel.text? = profiles.dictionary!.dictionaryProgress!.description + "%"
-        }
-        // Do any additional setup after loading the view.
-    }
         
+        getUserData() { (profiles) -> () in
+            DispatchQueue.main.async {
+                self.nameLabel.text? = profiles.name!
+                self.skillLevelLabel.text? = profiles.skillLevel!
+                self.courseLevelLabel.text? = profiles.courses![0].courseProgress!.description + "%"
+                self.quizLevelLabel.text? = profiles.quiz!.quizProgress!.description + "%"
+                self.libraryLevelLabel.text? = profiles.dictionary!.dictionaryProgress!.description + "%"
+            }
+        }
+        print("ViewDidLoad")
+    }
+    
     func getUserData(completionHandler: @escaping((_ userData: user)->())){
-        guard let url = URL(string: "localhost:8000/") else {return}
+        guard let url = URL(string: "http://localhost:8000/profile") else {return}
         var request = URLRequest(url: url)
         request.httpMethod = "GET"
         request.setValue("application/JSON", forHTTPHeaderField: "Content-Type")
@@ -83,14 +85,14 @@ struct user: Decodable {
     let name: String?
     let skillLevel: String?
     let avatar: String?
-
+    
     struct courses: Decodable {
         let courseId: Int?
         let courseName: String?
         let courseProgress: Int?
     }
     let courses: [courses]?
-
+    
     struct dictionary: Decodable {
         let dictionaryProgress: Int?
     }
@@ -104,6 +106,6 @@ struct user: Decodable {
     let quiz: quiz?
 }
 
-    
-    
+
+
 

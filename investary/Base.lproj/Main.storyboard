@@ -1020,11 +1020,11 @@
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="HAVE FUN" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OCU-5I-iu2">
-                                        <rect key="frame" x="106" y="43" width="163" height="34"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HAVE FUN" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OCU-5I-iu2">
+                                        <rect key="frame" x="8" y="43" width="358" height="34"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="34" id="JMG-eX-7Ah"/>
-                                            <constraint firstAttribute="width" constant="109" id="lvZ-9e-yjo"/>
+                                            <constraint firstAttribute="width" constant="358" id="KSv-U7-SqW"/>
+                                            <constraint firstAttribute="height" constant="34" id="W9R-f2-f21"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="26"/>
                                         <color key="textColor" red="0.30196736670000002" green="0.37908663399999998" blue="0.82366227609999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -1034,12 +1034,12 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstItem="alI-hw-kEf" firstAttribute="leading" secondItem="TuD-gj-HmN" secondAttribute="leading" constant="52" id="0nd-R1-mWb"/>
-                                    <constraint firstItem="OCU-5I-iu2" firstAttribute="leading" secondItem="TuD-gj-HmN" secondAttribute="leading" constant="132" id="QVh-Xm-h41"/>
+                                    <constraint firstItem="alI-hw-kEf" firstAttribute="top" secondItem="OCU-5I-iu2" secondAttribute="bottom" constant="73" id="EUV-rE-8fa"/>
+                                    <constraint firstItem="OCU-5I-iu2" firstAttribute="top" secondItem="TuD-gj-HmN" secondAttribute="top" constant="43" id="LLR-Jp-hzo"/>
                                     <constraint firstItem="rN4-Wi-qO3" firstAttribute="centerX" secondItem="alI-hw-kEf" secondAttribute="centerX" id="ZZH-Sj-WW3"/>
+                                    <constraint firstItem="OCU-5I-iu2" firstAttribute="leading" secondItem="TuD-gj-HmN" secondAttribute="leading" constant="8" id="cap-ap-AK8"/>
                                     <constraint firstAttribute="bottom" secondItem="rN4-Wi-qO3" secondAttribute="bottom" constant="61" id="kSx-1w-xj1"/>
                                     <constraint firstAttribute="height" constant="620" id="tS6-0q-xbT"/>
-                                    <constraint firstItem="alI-hw-kEf" firstAttribute="top" secondItem="OCU-5I-iu2" secondAttribute="bottom" constant="70" id="uWW-5p-rPu"/>
-                                    <constraint firstItem="OCU-5I-iu2" firstAttribute="top" secondItem="TuD-gj-HmN" secondAttribute="top" constant="46" id="yEn-eM-hN5"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -1077,7 +1077,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Igz-m7-EvB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2851" y="-222"/>
+            <point key="canvasLocation" x="2850.7246376811595" y="-222.32142857142856"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="13d-ge-63g">
@@ -1897,7 +1897,7 @@
         </designable>
     </designables>
     <inferredMetricsTieBreakers>
-        <segue reference="lzd-BA-Tc2"/>
+        <segue reference="M9l-CF-F53"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="background1.png" width="828" height="1792"/>

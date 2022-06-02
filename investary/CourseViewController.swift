@@ -9,7 +9,7 @@ import UIKit
 import AVFoundation
 
 class CourseViewController: UIViewController {
-
+    
     var utterance : AVSpeechUtterance!
     
     @IBOutlet weak var wordNameLabel: UILabel!
@@ -17,23 +17,45 @@ class CourseViewController: UIViewController {
     @IBAction func listenButton(_ sender: Any) {
     }
     
- 
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        parseJSON() { (courses) -> () in
-            print(courses.courseElements!)
-            self.courseText.text = courses.courseElements![0].description?.description
-            self.wordNameLabel.text = courses.courseElements![0].wordName?.description
-            self.utterance = AVSpeechUtterance(string: courses.courseElements![0].description?.description ?? "nix da")
-        }
         
-   
-        utterance.voice = AVSpeechSynthesisVoice(language: "en-GB")
-        utterance.rate = 0.1
-
-        let synthesizer = AVSpeechSynthesizer()
-        synthesizer.speak(utterance)
+        self.getCourseData() { (courses) -> () in
+            DispatchQueue.main.async {
+                print(courses.courseElements!)
+                self.courseText.text = courses.courseElements![0].description?.description
+                self.wordNameLabel.text = courses.courseElements![0].wordName?.description
+                self.utterance = AVSpeechUtterance(string: courses.courseElements![0].description?.description ?? "nix da")
+                self.utterance.voice = AVSpeechSynthesisVoice(language: "en-GB")
+                self.utterance.rate = 0.1
+                let synthesizer = AVSpeechSynthesizer()
+                synthesizer.speak(self.utterance)
+            }
+        }
+    }
+    
+    func getCourseData(completionHandler: @escaping((_ courseData: course)->())){
+        guard let url = URL(string: "http://localhost:8000/course") else {return}
+        var request = URLRequest(url: url)
+        request.httpMethod = "GET"
+        request.setValue("application/JSON", forHTTPHeaderField: "Content-Type")
+        
+        let task = URLSession.shared.dataTask(with: request){data, _, error in
+            guard let data = data, error == nil else{
+                return
+            }
+            let decoder = JSONDecoder()
+            do {
+                var courseData = try decoder.decode(course.self, from: data)
+                completionHandler(courseData)
+            }
+            catch {
+                print(error)
+            }
+        }
+        task.resume()
     }
     
     func parseJSON(completionHandler: @escaping ((_ courses: course)->())) {
@@ -67,7 +89,7 @@ class CourseViewController: UIViewController {
 struct course: Decodable {
     let courseName: String?
     let courseId: Int?
-
+    
     struct courseElements: Decodable {
         let wordName: String?
         let wordId: Int?

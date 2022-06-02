@@ -1,16 +1,23 @@
 const http = require("http");
-const json = require("./test.json");
+const url = require("url");
+const profileJSON = require("./profile.json");
+const courseJSON = require("./course.json");
 
 const host = 'localhost';
 const port = 8000;
 
-const requestListener = function (req, res) {
-    res.setHeader("Content-Type", "application/json");
-    res.writeHead(200);
-    res.end(JSON.stringify(json));
-}
 
-const server = http.createServer(requestListener);
-server.listen(port, host, () =>{
-    console.log(`Server is running on http://${host}:${port}`);
-})
+const server = http.createServer((req, res)=>{
+const reqUrl = url.parse(req.url).pathname
+if(req.method == "GET"){
+    if (reqUrl == "/profile"){
+        res.write(JSON.stringify(profileJSON))
+        res.end()
+    }else if(reqUrl == "/course"){
+        res.write(JSON.stringify(courseJSON))
+        res.end()
+    }
+}
+});
+
+server.listen(port);
