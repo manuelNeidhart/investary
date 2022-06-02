@@ -28,7 +28,28 @@ class ProfileViewController: UIViewController {
         }
         // Do any additional setup after loading the view.
     }
-    
+        
+    func getUserData(completionHandler: @escaping((_ userData: user)->())){
+        guard let url = URL(string: "localhost:8000/") else {return}
+        var request = URLRequest(url: url)
+        request.httpMethod = "GET"
+        request.setValue("application/JSON", forHTTPHeaderField: "Content-Type")
+        
+        let task = URLSession.shared.dataTask(with: request){data, _, error in
+            guard let data = data, error == nil else{
+                return
+            }
+            let decoder = JSONDecoder()
+            do {
+                var userData = try decoder.decode(user.self, from: data)
+                completionHandler(userData)
+            }
+            catch {
+                print(error)
+            }
+        }
+        task.resume()
+    }
     
     func parseJSON(completionHandler: @escaping ((_ profiles: user)->())) {
         guard let path = Bundle.main.path(forResource: "./json/user", ofType: "json") else {
