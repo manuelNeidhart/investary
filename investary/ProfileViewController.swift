@@ -52,34 +52,8 @@ class ProfileViewController: UIViewController {
         }
         task.resume()
     }
-    
-    func parseJSON(completionHandler: @escaping ((_ profiles: user)->())) {
-        guard let path = Bundle.main.path(forResource: "./json/user", ofType: "json") else {
-            
-            return
-        }
-        let url = URL(fileURLWithPath: path)
-        
-        var result: user?
-        do {
-            let jsonData = try Data(contentsOf: url)
-            result = try JSONDecoder().decode(user.self, from: jsonData)
-            print(jsonData)
-            print(result)
-            if let result = result {
-                print(result)
-                completionHandler(result)
-            }
-            else {
-                print("Failed to parse")
-            }
-        }
-        catch {
-            print("Error: \(error)")
-        }
-        
-    }
 }
+
 
 struct user: Decodable {
     let name: String?

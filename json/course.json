@@ -6,7 +6,11 @@
         "wordName": "tax",
         "wordId": 1,
         "isWordFinished": true,
-        "description": "A tax is a cash payment without a right to individual consideration, which a public-law community imposes on all taxable persons - which includes both natural and legal persons - to generate income."
+        "description": [
+            "A tax is a cash payment without a right to individual consideration, which a public-law community imposes on all taxable persons - which includes both natural and legal persons - to generate income.",
+            "Gregor2",
+            "Tikautz"
+        ]
       },
       {
         "wordName": "bearish",

@@ -11,7 +11,23 @@ import AVFoundation
 class CourseViewController: UIViewController {
     
     var utterance : AVSpeechUtterance!
+    var coursePartCounter: Int! = 0
     
+    @IBAction func continueButton(_ sender: Any){
+        print("continueButton pressed")
+        print(coursePartCounter.description)
+        
+        if coursePartCounter == 2 {
+            continueButtonText.setTitle("finish", for: .normal)
+        }else if coursePartCounter >= 3{
+            coursePartCounter = 0
+            
+        }
+        coursePartCounter = coursePartCounter + 1
+        loadData()
+    }
+    
+    @IBOutlet weak var continueButtonText: RoundedButton!
     @IBOutlet weak var wordNameLabel: UILabel!
     @IBOutlet weak var courseText: UITextView!
     @IBAction func listenButton(_ sender: Any) {
@@ -21,13 +37,16 @@ class CourseViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        loadData()
+    }
+    
+    func loadData(){
+        print("loadData")
         self.getCourseData() { (courses) -> () in
             DispatchQueue.main.async {
-                print(courses.courseElements!)
-                self.courseText.text = courses.courseElements![0].description?.description
+                self.courseText.text = courses.courseElements![0].description[self.coursePartCounter!].description
                 self.wordNameLabel.text = courses.courseElements![0].wordName?.description
-                self.utterance = AVSpeechUtterance(string: courses.courseElements![0].description?.description ?? "nix da")
+                self.utterance = AVSpeechUtterance(string: courses.courseElements![0].description[0].description)
                 self.utterance.voice = AVSpeechSynthesisVoice(language: "en-GB")
                 self.utterance.rate = 0.1
                 let synthesizer = AVSpeechSynthesizer()
@@ -57,33 +76,6 @@ class CourseViewController: UIViewController {
         }
         task.resume()
     }
-    
-    func parseJSON(completionHandler: @escaping ((_ courses: course)->())) {
-        guard let path = Bundle.main.path(forResource: "./json/course", ofType: "json") else {
-            
-            return
-        }
-        let url = URL(fileURLWithPath: path)
-        
-        var result: course?
-        do {
-            let jsonData = try Data(contentsOf: url)
-            result = try JSONDecoder().decode(course.self, from: jsonData)
-            print(jsonData)
-            print(result)
-            if let result = result {
-                print(result)
-                completionHandler(result)
-            }
-            else {
-                print("Failed to parse")
-            }
-        }
-        catch {
-            print("Error: \(error)")
-        }
-        
-    }
 }
 
 struct course: Decodable {
@@ -94,7 +86,7 @@ struct course: Decodable {
         let wordName: String?
         let wordId: Int?
         let isWordFinished: Bool?
-        let description: String?
+        let description: [String]
     }
     let courseElements: [courseElements]?
 }

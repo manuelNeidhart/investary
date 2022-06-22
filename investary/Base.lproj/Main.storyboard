@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -355,6 +354,9 @@
                                                 <color key="value" red="0.30196736670000002" green="0.37908663399999998" blue="0.82366227609999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="continueButton:" destination="mow-P0-QE8" eventType="touchUpInside" id="tmt-qi-Ddh"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pq0-yo-nsK" customClass="RoundedButton" customModule="investary" customModuleProvider="target">
                                         <rect key="frame" x="119" y="616" width="176" height="42"/>
@@ -417,6 +419,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="sxR-MB-8KX"/>
                     <connections>
+                        <outlet property="continueButtonText" destination="s6Y-y9-36O" id="ulI-xW-KE7"/>
                         <outlet property="courseText" destination="jk4-u5-fjB" id="2Cm-Rg-ChY"/>
                         <outlet property="wordNameLabel" destination="gun-1y-rmU" id="PWF-eN-vFX"/>
                     </connections>
