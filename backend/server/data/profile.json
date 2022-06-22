@@ -1,0 +1,27 @@
+{
+    "name": "John Doe",
+    "skillLevel": "Beginner",
+    "avatar": "../images/memoji-2.png",
+    "courses": [
+      {
+        "courseId": 1,
+        "courseName": "Beginner Course",
+        "courseProgress": 0
+      },
+      {
+        "courseId": 2,
+        "courseName": "Expert Course",
+        "courseProgress": 3
+      }
+    ],
+    "dictionary": {
+      "dictionaryProgress": 4    
+    },
+    "quiz":
+      {
+        "currentQuizId": 2,
+        "quizName": "Second Quiz",
+        "quizProgress": 1
+      }
+}
+  

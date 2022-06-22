@@ -1,3 +1,16 @@
+const express = require('express');
+const fs = require('fs');
+const bodyParser = require('body-parser');
+
+const app = express();
+
+const routes = require("./routes.js")(app, fs);
+
+const server = app.listen(8000, ()=>{
+    console.log("listening on port %s...", server.address().port);
+})
+
+/*
 const http = require("http");
 const url = require("url");
 const profileJSON = require("./profile.json");
@@ -17,7 +30,10 @@ if(req.method == "GET"){
         res.write(JSON.stringify(courseJSON))
         res.end()
     }
-}
-});
+}});
+
 
 server.listen(port);
+console.log("Server is listening on port:" + port);
+
+*/

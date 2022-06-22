@@ -17,10 +17,14 @@ class CourseViewController: UIViewController {
         print("continueButton pressed")
         print(coursePartCounter.description)
         
-        if coursePartCounter == 2 {
+        if coursePartCounter == 1 {
             continueButtonText.setTitle("finish", for: .normal)
-        }else if coursePartCounter >= 3{
+        }else if coursePartCounter >= 2{
+            print(">=2")
             coursePartCounter = 0
+            DispatchQueue.main.async {
+                self.performSegue(withIdentifier: "finishSegue", sender: self)
+            }
             
         }
         coursePartCounter = coursePartCounter + 1
@@ -37,6 +41,7 @@ class CourseViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.hidesBackButton = true
         loadData()
     }
     
