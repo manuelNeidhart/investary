@@ -49,7 +49,7 @@ const userRoutes = (app,fs)=>{
             data["courses"]["courseProgress"] = courseCount;
 
             writeFile(data, ()=>{
-                res.status(200).send("Hob den Neger für dich geupdated!");
+                res.status(200).send("test");
             }, profileData);
         }, true);
     });
