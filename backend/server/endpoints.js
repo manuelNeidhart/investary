@@ -1,4 +1,4 @@
-const userRoutes = (app,fs)=>{
+const userRoutes = (app, fs) => {
     const profileData = "./data/profile.json";
     const courseData = "./data/course.json";
 
@@ -7,22 +7,22 @@ const userRoutes = (app,fs)=>{
         returnJson = false,
         filePath,
         encoding = 'utf8'
-    )=>{
-        fs.readFile(filePath, encoding, (err, data)=>{
-            if (err){
+    ) => {
+        fs.readFile(filePath, encoding, (err, data) => {
+            if (err) {
                 throw err;
             }
             callback(returnJson ? JSON.parse(data) : data);
         });
     };
-    
+
     const writeFile = (
         fileData,
         callback,
         filePath,
         encoding = 'utf8'
-    )=>{
-        fs.writeFile(filePath, fileData, encoding, err =>{
+    ) => {
+        fs.writeFile(filePath, fileData, encoding, err => {
             if (err) {
                 throw err;
             }
@@ -31,31 +31,31 @@ const userRoutes = (app,fs)=>{
     };
 
 
-    app.get("/profile", (req, res)=>{
+    app.get("/profile", (req, res) => {
         readFile(data => {
             res.send(data);
         }, true, profileData);
     });
 
-    app.get("/course", (req, res)=>{
+    app.get("/course", (req, res) => {
         readFile(data => {
             res.send(data);
         }, true, courseData);
     });
 
-    app.put("/profile/:courseCount", (req, res)=>{
+    app.put("/profile/:courseCount", (req, res) => {
         readFile(data => {
             const courseCount = req.params["courseCount"];
-            data["courses"]["courseProgress"] = courseCount;
+            data["courses"][0]["courseProgress"] = courseCount;
 
-            writeFile(data, ()=>{
+            writeFile(JSON.stringify(data), () => {
                 res.status(200).send("test");
             }, profileData);
-        }, true);
+        }, true, profileData);
     });
-    
-    };
+
+};
 
 
 
-    module.exports = userRoutes;
+module.exports = userRoutes;
