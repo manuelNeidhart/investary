@@ -44,7 +44,7 @@ class ProfileViewController: UIViewController {
     
     
     func resetData() {
-        guard let url = URL(string: "http://localhost:8000/resetCourse") else {
+        guard let url = URL(string: "http://localhost:8000/resetCourse/0") else {
                     return
                 }
                 

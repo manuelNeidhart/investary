@@ -295,7 +295,7 @@
             <objects>
                 <viewController id="mow-P0-QE8" customClass="CourseViewController" customModule="investary" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kBm-5y-6y5">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background1.png" translatesAutoresizingMaskIntoConstraints="NO" id="P5T-FR-Abu">
@@ -303,7 +303,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TxH-BC-MEK" customClass="RoundedCornerView" customModule="investary" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="101" width="414" height="805"/>
+                                <rect key="frame" x="0.0" y="13" width="414" height="839"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gun-1y-rmU">
                                         <rect key="frame" x="8" y="100" width="398" height="39"/>
@@ -323,7 +323,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="jk4-u5-fjB">
-                                        <rect key="frame" x="34" y="185" width="346" height="429"/>
+                                        <rect key="frame" x="34" y="185" width="346" height="463"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                         <color key="textColor" systemColor="labelColor"/>
@@ -331,7 +331,7 @@
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s6Y-y9-36O" customClass="RoundedButton" customModule="investary" customModuleProvider="target">
-                                        <rect key="frame" x="119" y="666" width="176" height="42"/>
+                                        <rect key="frame" x="119" y="700" width="176" height="42"/>
                                         <color key="backgroundColor" red="0.30196736670000002" green="0.37908663399999998" blue="0.82366227609999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="42" id="oiB-2C-Hbv"/>
@@ -359,7 +359,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pq0-yo-nsK" customClass="RoundedButton" customModule="investary" customModuleProvider="target">
-                                        <rect key="frame" x="119" y="616" width="176" height="42"/>
+                                        <rect key="frame" x="119" y="650" width="176" height="42"/>
                                         <color key="backgroundColor" red="0.30196736670000002" green="0.37908663399999998" blue="0.82366227609999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="42" id="nNi-WX-etl"/>
@@ -434,7 +434,7 @@
             <objects>
                 <viewController id="963-vz-liQ" customClass="ViewController" customModule="investary" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="N03-oZ-mFr">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background1.png" translatesAutoresizingMaskIntoConstraints="NO" id="T7V-72-Xkb">
@@ -442,7 +442,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ug5-Nx-Y7V" customClass="RoundedCornerView" customModule="investary" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="128" width="414" height="89"/>
+                                <rect key="frame" x="0.0" y="40" width="414" height="177"/>
                                 <subviews>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LMJ-ad-6fG">
                                         <rect key="frame" x="34" y="13" width="346" height="68"/>
@@ -469,7 +469,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jtB-q8-EoB" customClass="RoundedCornerView" customModule="investary" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="305" width="414" height="559"/>
+                                <rect key="frame" x="0.0" y="305" width="414" height="554"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="center" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type in your answer..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tQ3-cY-sc3">
                                         <rect key="frame" x="89" y="143" width="237" height="34"/>
@@ -557,7 +557,7 @@
             <objects>
                 <viewController id="td0-YI-B3E" customClass="ViewController" customModule="investary" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ffb-LV-Ssa">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background1.png" translatesAutoresizingMaskIntoConstraints="NO" id="Bcw-FD-ZhT">
@@ -1295,7 +1295,7 @@
             <objects>
                 <viewController id="hTa-ra-EoR" customClass="ViewController" customModule="investary" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="R1R-9c-G2c">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background1.png" translatesAutoresizingMaskIntoConstraints="NO" id="guh-Iv-iCb">
@@ -1306,7 +1306,7 @@
                                 </constraints>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l1x-ZY-wve" customClass="RoundedCornerView" customModule="investary" customModuleProvider="target">
-                                <rect key="frame" x="20" y="88" width="374" height="702"/>
+                                <rect key="frame" x="20" y="0.0" width="374" height="702"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D3U-pa-cTW" customClass="RoundedCornerView" customModule="investary" customModuleProvider="target">
                                         <rect key="frame" x="14" y="210" width="346" height="119"/>
@@ -1859,8 +1859,8 @@
         </designable>
     </designables>
     <inferredMetricsTieBreakers>
-        <segue reference="HTd-3k-W7C"/>
-        <segue reference="Z07-E6-ZOe"/>
+        <segue reference="VD7-cf-8dU"/>
+        <segue reference="cPm-WQ-C1a"/>
         <segue reference="M9l-CF-F53"/>
     </inferredMetricsTieBreakers>
     <resources>

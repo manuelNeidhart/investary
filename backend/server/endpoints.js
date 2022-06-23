@@ -37,27 +37,39 @@ const userRoutes = (app, fs) => {
         }, true, profileData);
     });
 
-    app.get("/course", (req, res) => {
+    app.get("/course/:courseLevel", (req, res) => {
+        const courseLevel = req.params["courseLevel"];
         readFile(data => {
-            res.send(data);
+            res.send(data[parseInt(courseLevel)]);
         }, true, courseData);
     });
 
+    app.get("/courseProgress/:courseLevel", (req, res) => {
+        const courseLevel = req.params["courseLevel"];
+        
+            readFile(data => {
+                res.status(200).send(String(data["courses"][parseInt(courseLevel)]["courseProgress"]));
+            }, true, profileData);
+    });
+
+
+
     app.put("/profile/:courseLevel", (req, res) => {
+        const courseLevel = req.params["courseLevel"];
         readFile(data => {
-            const currentCount = data["courses"][0]["courseProgress"]
-
-            data["courses"][0]["courseProgress"] = currentCount+1;
-
+            let currentCount = data["courses"][parseInt(courseLevel)]["courseProgress"];
+            data["courses"][parseInt(courseLevel)]["courseProgress"] = currentCount+1;
             writeFile(JSON.stringify(data), () => {
                 res.status(200).send("test");
             }, profileData);
+                
         }, true, profileData);
     });
 
-    app.put("/resetCourse", (req, res) => {
+    app.put("/resetCourse/:courseLevel", (req, res) => {
+        const courseLevel = req.params["courseLevel"];
         readFile(data => {
-            data["courses"][0]["courseProgress"] = 0;
+            data["courses"][courseLevel]["courseProgress"] = 0;
 
             writeFile(JSON.stringify(data), () => {
                 res.status(200).send("test");

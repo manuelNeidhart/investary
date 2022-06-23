@@ -20,7 +20,6 @@ class CourseViewController: UIViewController {
         }else if coursePartCounter >= 2{
             print(courseCount!)
             coursePartCounter = 0
-            courseCount+=1
             updateCourse()
             DispatchQueue.main.async {
                 self.performSegue(withIdentifier: "finishSegue", sender: self)
@@ -42,15 +41,69 @@ class CourseViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.hidesBackButton = true
-        loadData()
-        courseCount = 0
-        print("EDEREDEREDEREDER")
+        
+        DispatchQueue.main.async {
+            self.resetData()
+            self.loadData()
+        }
     }
+    
+    func getCourseProgress(completionHandler: @escaping((_ courseData: Int)->())){
+        guard let url = URL(string: "http://localhost:8000/courseProgress/0") else {return}
+        var request = URLRequest(url: url)
+        request.httpMethod = "GET"
+        request.setValue("application/JSON", forHTTPHeaderField: "Content-Type")
+        
+        let task = URLSession.shared.dataTask(with: request){data, _, error in
+            guard let data = data, error == nil else{
+                return
+            }
+            let decoder = JSONDecoder()
+            do {
+                var courseData = try decoder.decode(Int.self, from: data)
+                completionHandler(courseData)
+            }
+            catch {
+                print(error)
+            }
+        }
+        task.resume()
+    }
+    
+    func resetData() {
+        guard let url = URL(string: "http://localhost:8000/resetCourse/0") else {
+                    return
+                }
+                
+                var request = URLRequest(url: url)
+                request.httpMethod = "PUT"
+            
+                let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
+                    if let httpResponse = response as? HTTPURLResponse {
+                        if (httpResponse.statusCode != 200) {
+                            return
+                        }
+                    }
+                    
+                }
+                task.resume()
+            }
+
     
     func loadData(){
         print("loadData")
+        
+        getCourseProgress(completionHandler: { courseData in
+            DispatchQueue.main.async {
+                self.courseCount = Int(courseData) ?? 0
+            }
+        })
+        
         self.getCourseData() { (courses) -> () in
             DispatchQueue.main.async {
+                
+                print(courses.self)
+                
                 self.courseText.text = courses.courseElements![self.courseCount!].description[self.coursePartCounter!].description
                 self.wordNameLabel.text = courses.courseElements![self.courseCount!].wordName?.description
                 self.utterance = AVSpeechUtterance(string: courses.courseElements![self.courseCount!].description[0].description)
@@ -60,6 +113,8 @@ class CourseViewController: UIViewController {
                 synthesizer.speak(self.utterance)
             }
         }
+        
+        
     }
     
     func updateCourse() {
@@ -82,7 +137,7 @@ class CourseViewController: UIViewController {
             }
     
     func getCourseData(completionHandler: @escaping((_ courseData: course)->())){
-        guard let url = URL(string: "http://localhost:8000/course") else {return}
+        guard let url = URL(string: "http://localhost:8000/course/0") else {return}
         var request = URLRequest(url: url)
         request.httpMethod = "GET"
         request.setValue("application/JSON", forHTTPHeaderField: "Content-Type")

@@ -1,4 +1,5 @@
-{
+[
+  {
     "courseName": "Beginner Course",
     "courseId" : 1,
     "courseElements": [
@@ -33,4 +34,42 @@
         ]
       }
     ]
+  },
+  {
+    "courseName": "Expert Course",
+    "courseId" : 2,
+    "courseElements": [
+      {
+        "wordName": "tax",
+        "wordId": 1,
+        "isWordFinished": true,
+        "description": [
+            "Zweiter Kurs",
+            "Wahnsin",
+            "oaijerfölj"
+        ]
+      },
+      {
+        "wordName": "bearish",
+        "wordId": 2,
+        "isWordFinished": false,
+        "description": [
+            "piawuehgpa",
+            "akshjfpoöwhenföon",
+            "6181351"
+        ]
+      },
+      {
+        "wordName": "swiftn",
+        "wordId": 2,
+        "isWordFinished": false,
+        "description": [
+            "asdfasdf",
+            "asdfdffdffdf",
+            "swi00000ftn"
+        ]
+      }
+    ]
   }
+]
+
