@@ -18,7 +18,6 @@ class CourseViewController: UIViewController {
         if coursePartCounter == 1 {
             continueButtonText.setTitle("finish", for: .normal)
         }else if coursePartCounter >= 2{
-            print(courseCount!)
             coursePartCounter = 0
             updateCourse()
             DispatchQueue.main.async {
@@ -37,13 +36,12 @@ class CourseViewController: UIViewController {
     }
     
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.hidesBackButton = true
         
         DispatchQueue.main.async {
-            self.resetData()
+            
             self.loadData()
         }
     }
@@ -101,8 +99,6 @@ class CourseViewController: UIViewController {
         
         self.getCourseData() { (courses) -> () in
             DispatchQueue.main.async {
-                
-                print(courses.self)
                 
                 self.courseText.text = courses.courseElements![self.courseCount!].description[self.coursePartCounter!].description
                 self.wordNameLabel.text = courses.courseElements![self.courseCount!].wordName?.description
