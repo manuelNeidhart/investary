@@ -13,6 +13,8 @@ class CourseViewController: UIViewController {
     var utterance : AVSpeechUtterance!
     var coursePartCounter: Int! = 0
     var courseCount: Int!
+    var lengthOfCourses: Int!
+    var level: Int! = 0
     
     @IBAction func continueButton(_ sender: Any){
         if coursePartCounter == 1 {
@@ -47,7 +49,7 @@ class CourseViewController: UIViewController {
     }
     
     func getCourseProgress(completionHandler: @escaping((_ courseData: Int)->())){
-        guard let url = URL(string: "http://localhost:8000/courseProgress/0") else {return}
+        guard let url = URL(string: "http://localhost:8000/courseProgress/\(level!.description)") else {return}
         var request = URLRequest(url: url)
         request.httpMethod = "GET"
         request.setValue("application/JSON", forHTTPHeaderField: "Content-Type")
@@ -69,7 +71,7 @@ class CourseViewController: UIViewController {
     }
     
     func resetData() {
-        guard let url = URL(string: "http://localhost:8000/resetCourse/0") else {
+        guard let url = URL(string: "http://localhost:8000/resetCourse/\(level!)") else {
                     return
                 }
                 
@@ -89,32 +91,59 @@ class CourseViewController: UIViewController {
 
     
     func loadData(){
-        print("loadData")
-        
-        getCourseProgress(completionHandler: { courseData in
-            DispatchQueue.main.async {
-                self.courseCount = Int(courseData) ?? 0
-            }
-        })
         
         self.getCourseData() { (courses) -> () in
             DispatchQueue.main.async {
-                
-                self.courseText.text = courses.courseElements![self.courseCount!].description[self.coursePartCounter!].description
-                self.wordNameLabel.text = courses.courseElements![self.courseCount!].wordName?.description
-                self.utterance = AVSpeechUtterance(string: courses.courseElements![self.courseCount!].description[0].description)
-                self.utterance.voice = AVSpeechSynthesisVoice(language: "en-GB")
-                self.utterance.rate = 0.1
-                let synthesizer = AVSpeechSynthesizer()
-                synthesizer.speak(self.utterance)
+                self.lengthOfCourses = courses.courseElements?.count
             }
         }
         
+ 
         
-    }
+            self.getCourseProgress(completionHandler: { courseData in
+                DispatchQueue.main.async {
+                
+                
+                self.courseCount = Int(courseData)
+                
+                print("Course Count: " + String(self.courseCount))
+                
+                
+                if(self.courseCount >= self.lengthOfCourses ){
+                    self.level = 1
+                    
+                    
+                   self.resetData()
+                    self.courseCount = 0
+                   // print("Course Count Reset: " + String(self.courseCount))
+            
+                }
+            
+                print("Length Of Courses: " + String(self.lengthOfCourses))
+              
+                    self.getCourseData() { (courses) -> () in
+                        DispatchQueue.main.async {
+                            print("Queue Course Count: " + String(self.courseCount))
+                           
+                            self.courseText.text = courses.courseElements![self.courseCount!].description[self.coursePartCounter!].description
+                            self.wordNameLabel.text = courses.courseElements![self.courseCount!].wordName?.description
+                            self.utterance = AVSpeechUtterance(string: courses.courseElements![self.courseCount!].description[0].description)
+                            self.utterance.voice = AVSpeechSynthesisVoice(language: "en-GB")
+                            self.utterance.rate = 0.1
+                            let synthesizer = AVSpeechSynthesizer()
+                            synthesizer.speak(self.utterance)
+                        }
+                    }
+                }
+                })
+         
+     
+        
+        
+        }
     
     func updateCourse() {
-        guard let url = URL(string: "http://localhost:8000/profile/0") else {
+        guard let url = URL(string: "http://localhost:8000/profile/\(level!.description)") else {
                     return
                 }
                 
@@ -133,7 +162,7 @@ class CourseViewController: UIViewController {
             }
     
     func getCourseData(completionHandler: @escaping((_ courseData: course)->())){
-        guard let url = URL(string: "http://localhost:8000/course/0") else {return}
+        guard let url = URL(string: "http://localhost:8000/course/\(level!.description)") else {return}
         var request = URLRequest(url: url)
         request.httpMethod = "GET"
         request.setValue("application/JSON", forHTTPHeaderField: "Content-Type")

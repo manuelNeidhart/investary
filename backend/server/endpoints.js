@@ -39,6 +39,8 @@ const userRoutes = (app, fs) => {
 
     app.get("/course/:courseLevel", (req, res) => {
         const courseLevel = req.params["courseLevel"];
+        console.log(courseLevel);
+
         readFile(data => {
             res.send(data[parseInt(courseLevel)]);
         }, true, courseData);
@@ -46,7 +48,7 @@ const userRoutes = (app, fs) => {
 
     app.get("/courseProgress/:courseLevel", (req, res) => {
         const courseLevel = req.params["courseLevel"];
-        
+
             readFile(data => {
                 res.status(200).send(String(data["courses"][parseInt(courseLevel)]["courseProgress"]));
             }, true, profileData);

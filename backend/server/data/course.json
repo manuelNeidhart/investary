@@ -1,75 +1,74 @@
 [
   {
     "courseName": "Beginner Course",
-    "courseId" : 1,
+    "courseId": 1,
     "courseElements": [
       {
-        "wordName": "tax",
+        "wordName": "FirstCourse - Easy",
         "wordId": 1,
-        "isWordFinished": true,
+        "isWordFinished": false,
         "description": [
-            "A tax is a cash payment without a right to individual consideration, which a public-law community imposes on all taxable persons - which includes both natural and legal persons - to generate income.",
-            "Gregor2",
-            "Tikautz"
+          "A tax is a cash payment without a right to individual consideration, which a public-law community imposes on all taxable persons - which includes both natural and legal persons - to generate income.",
+          "After-hours trading starts at 4 p.m. U.S. Eastern Time after the major U.S. stock exchanges close. The after-hours trading session can run as late as 8 p.m., though volume typically thins out much earlier in the session. Trading in the after-hours is conducted through electronic communication networks (ECNs).",
+          "An asset is a resource with economic value that an individual, corporation, or country owns or controls with the expectation that it will provide a future benefit. Assets are reported on a company's balance sheet and are bought or created to increase a firm's value or benefit the firm's operations."
         ]
       },
       {
-        "wordName": "bearish",
+        "wordName": "SecondCourse - Easy",
         "wordId": 2,
         "isWordFinished": false,
         "description": [
-            "Characterized by or associated with falling share prices.",
-            "Graski1",
-            "Graski2"
+          "Bitcoin mining is the process of creating new bitcoin by solving puzzles. It consists of computing systems equipped with specialized chips competing to solve mathematical puzzles. The first bitcoin miner (as these systems are called) to solve the puzzle is rewarded with bitcoin.",
+          "Capitalism is an economic system in which private individuals or businesses own capital goods. The production of goods and services is based on supply and demand in the general market—known as a market economy—rather than through central planning—known as a planned economy or command economy.",
+          "A dividend is the distribution of some of a company's earnings to a class of its shareholders, as determined by the company's board of directors. Common shareholders of dividend-paying companies are typically eligible as long as they own the stock before the ex-dividend date."
         ]
       },
       {
-        "wordName": "swiftn",
-        "wordId": 2,
+        "wordName": "ThirdCourse - Easy",
+        "wordId": 3,
         "isWordFinished": false,
         "description": [
-            "heftig",
-            "eini",
-            "swiftn"
+          "Hedge funds are actively managed investment pools whose managers use a wide range of strategies, often including buying with borrowed money and trading esoteric assets, in an effort to beat average investment returns for their clients. They are considered risky alternative investment choices.",
+          "Inflation is the decline of purchasing power of a given currency over time. A quantitative estimate of the rate at which the decline in purchasing power occurs can be reflected in the increase of an average price level of a basket of selected goods and services in an economy over some period of time.",
+          "Marketing refers to activities a company undertakes to promote the buying or selling of a product or service. Marketing includes advertising, selling, and delivering products to consumers or other businesses. Some marketing is done by affiliates on behalf of a company."
         ]
       }
     ]
   },
   {
     "courseName": "Expert Course",
-    "courseId" : 2,
+    "courseId": 2,
     "courseElements": [
       {
-        "wordName": "tax",
+        "wordName": "FirstCourse - Expert",
         "wordId": 1,
-        "isWordFinished": true,
+        "isWordFinished": false,
         "description": [
-            "Zweiter Kurs",
-            "Wahnsin",
-            "oaijerfölj"
+          "A null hypothesis is a type of statistical hypothesis that proposes that no statistical significance exists in a set of given observations. Hypothesis testing is used to assess the credibility of a hypothesis by using sample data. The null hypothesis, also known as the conjecture, is used in quantitative analysis to test theories about markets, investing strategies, or economies to decide if an idea is true or false.",
+          "The term racketeering broadly refers to criminal acts, typically those involving extortion. It is usually used in reference to patterns of illegal activity specified in the Racketeer Influenced and Corrupt Organizations Act (RICO). This is a U.S. federal law that makes it illegal to acquire or control a business through certain crimes or income from those crimes.",
+          "The term trust fund refers to an estate planning tool that establishes a legal entity to hold property or assets for a person or organization. Trust funds can hold a variety of assets, such as money, real property, stocks and bonds, a business, or a combination of many different types of properties or assets."
         ]
       },
       {
-        "wordName": "bearish",
+        "wordName": "SecondCourse - Expert",
         "wordId": 2,
         "isWordFinished": false,
         "description": [
-            "piawuehgpa",
-            "akshjfpoöwhenföon",
-            "6181351"
+          "The term xenocurrency refers to any currency that is traded in markets outside of its domestic borders. Its name derives from the Greek prefix xeno, meaning foreign.",
+          "Yield refers to the earnings generated and realized on an investment over a particular period of time. It's expressed as a percentage based on the invested amount, current market value, or face value of the security.",
+          "A zero-coupon bond, also known as an accrual bond, is a debt security that does not pay interest but instead trades at a deep discount, rendering a profit at maturity, when the bond is redeemed for its full face value."
         ]
       },
       {
-        "wordName": "swiftn",
-        "wordId": 2,
+        "wordName": "ThirdCourse - Expert",
+        "wordId": 3,
         "isWordFinished": false,
         "description": [
-            "asdfasdf",
-            "asdfdffdffdf",
-            "swi00000ftn"
+          "The Zeta Model is a mathematical model that estimates the chances of a public company going bankrupt within a two-year time period. The number produced by the model is referred to as the company's Z-score (or zeta score) and is considered to be a reasonably accurate predictor of future bankruptcy.",
+          "A yield curve is a line that plots yields (interest rates) of bonds having equal credit quality but differing maturity dates. The slope of the yield curve gives an idea of future interest rate changes and economic activity.",
+          "A value chain is a business model that describes the full range of activities needed to create a product or service. For companies that produce goods, a value chain comprises the steps that involve bringing a product from conception to distribution, and everything in between—such as procuring raw materials, manufacturing functions, and marketing activities."
         ]
       }
     ]
   }
 ]
-
