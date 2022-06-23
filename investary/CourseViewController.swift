@@ -106,7 +106,7 @@ class CourseViewController: UIViewController {
                 
                 self.courseCount = Int(courseData)
                 
-                print("Course Count: " + String(self.courseCount))
+                //print("Course Count: " + String(self.courseCount))
                 
                 
                 if(self.courseCount >= self.lengthOfCourses ){
@@ -119,11 +119,11 @@ class CourseViewController: UIViewController {
             
                 }
             
-                print("Length Of Courses: " + String(self.lengthOfCourses))
+              //  print("Length Of Courses: " + String(self.lengthOfCourses))
               
                     self.getCourseData() { (courses) -> () in
                         DispatchQueue.main.async {
-                            print("Queue Course Count: " + String(self.courseCount))
+                        //    print("Queue Course Count: " + String(self.courseCount))
                            
                             self.courseText.text = courses.courseElements![self.courseCount!].description[self.coursePartCounter!].description
                             self.wordNameLabel.text = courses.courseElements![self.courseCount!].wordName?.description
