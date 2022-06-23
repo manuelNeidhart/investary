@@ -16,21 +16,52 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var skillLevelLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
     
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.hidesBackButton = true
-        
+        resetData()
+    }
+    
+    override func viewDidAppear(_ animated: Bool){
+        super.viewDidAppear(animated)
+        loadData()
+    }
+    
+    func loadData(){
         getUserData() { (profiles) -> () in
             DispatchQueue.main.async {
                 self.nameLabel.text? = profiles.name!
                 self.skillLevelLabel.text? = profiles.skillLevel!
-                self.courseLevelLabel.text? = profiles.courses![0].courseProgress!.description + "%"
-                self.quizLevelLabel.text? = profiles.quiz!.quizProgress!.description + "%"
-                self.libraryLevelLabel.text? = profiles.dictionary!.dictionaryProgress!.description + "%"
+                self.courseLevelLabel.text? = profiles.courses![0].courseProgress!.description
+                self.quizLevelLabel.text? = profiles.quiz!.quizProgress!.description
+                self.libraryLevelLabel.text? = profiles.dictionary!.dictionaryProgress!.description
             }
         }
-        print("ViewDidLoad")
     }
+    
+    
+    func resetData() {
+        guard let url = URL(string: "http://localhost:8000/resetCourse") else {
+                    return
+                }
+                
+                var request = URLRequest(url: url)
+                request.httpMethod = "PUT"
+            
+                let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
+                    if let httpResponse = response as? HTTPURLResponse {
+                        if (httpResponse.statusCode != 200) {
+                            return
+                        }
+                    }
+                    
+                }
+                task.resume()
+            }
+    
     
     func getUserData(completionHandler: @escaping((_ userData: user)->())){
         guard let url = URL(string: "http://localhost:8000/profile") else {return}

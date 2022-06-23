@@ -12,16 +12,16 @@ class CourseViewController: UIViewController {
     
     var utterance : AVSpeechUtterance!
     var coursePartCounter: Int! = 0
+    var courseCount: Int!
     
     @IBAction func continueButton(_ sender: Any){
-        print("continueButton pressed")
-        print(coursePartCounter.description)
-        
         if coursePartCounter == 1 {
             continueButtonText.setTitle("finish", for: .normal)
         }else if coursePartCounter >= 2{
-            print(">=2")
+            print(courseCount!)
             coursePartCounter = 0
+            courseCount+=1
+            updateCourse()
             DispatchQueue.main.async {
                 self.performSegue(withIdentifier: "finishSegue", sender: self)
             }
@@ -43,15 +43,17 @@ class CourseViewController: UIViewController {
         super.viewDidLoad()
         self.navigationItem.hidesBackButton = true
         loadData()
+        courseCount = 0
+        print("EDEREDEREDEREDER")
     }
     
     func loadData(){
         print("loadData")
         self.getCourseData() { (courses) -> () in
             DispatchQueue.main.async {
-                self.courseText.text = courses.courseElements![0].description[self.coursePartCounter!].description
-                self.wordNameLabel.text = courses.courseElements![0].wordName?.description
-                self.utterance = AVSpeechUtterance(string: courses.courseElements![0].description[0].description)
+                self.courseText.text = courses.courseElements![self.courseCount!].description[self.coursePartCounter!].description
+                self.wordNameLabel.text = courses.courseElements![self.courseCount!].wordName?.description
+                self.utterance = AVSpeechUtterance(string: courses.courseElements![self.courseCount!].description[0].description)
                 self.utterance.voice = AVSpeechSynthesisVoice(language: "en-GB")
                 self.utterance.rate = 0.1
                 let synthesizer = AVSpeechSynthesizer()
@@ -59,6 +61,25 @@ class CourseViewController: UIViewController {
             }
         }
     }
+    
+    func updateCourse() {
+        guard let url = URL(string: "http://localhost:8000/profile/0") else {
+                    return
+                }
+                
+                var request = URLRequest(url: url)
+                request.httpMethod = "PUT"
+            
+                let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
+                    if let httpResponse = response as? HTTPURLResponse {
+                        if (httpResponse.statusCode != 200) {
+                            return
+                        }
+                    }
+                    
+                }
+                task.resume()
+            }
     
     func getCourseData(completionHandler: @escaping((_ courseData: course)->())){
         guard let url = URL(string: "http://localhost:8000/course") else {return}

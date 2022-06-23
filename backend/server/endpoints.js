@@ -43,10 +43,21 @@ const userRoutes = (app, fs) => {
         }, true, courseData);
     });
 
-    app.put("/profile/:courseCount", (req, res) => {
+    app.put("/profile/:courseLevel", (req, res) => {
         readFile(data => {
-            const courseCount = req.params["courseCount"];
-            data["courses"][0]["courseProgress"] = courseCount;
+            const currentCount = data["courses"][0]["courseProgress"]
+
+            data["courses"][0]["courseProgress"] = currentCount+1;
+
+            writeFile(JSON.stringify(data), () => {
+                res.status(200).send("test");
+            }, profileData);
+        }, true, profileData);
+    });
+
+    app.put("/resetCourse", (req, res) => {
+        readFile(data => {
+            data["courses"][0]["courseProgress"] = 0;
 
             writeFile(JSON.stringify(data), () => {
                 res.status(200).send("test");
