@@ -4,33 +4,83 @@
     "courseId": 1,
     "courseElements": [
       {
-        "wordName": "FirstCourse - Easy",
+        "wordName": "Interest Rate",
         "wordId": 1,
         "isWordFinished": false,
         "description": [
-          "A tax is a cash payment without a right to individual consideration, which a public-law community imposes on all taxable persons - which includes both natural and legal persons - to generate income.",
-          "After-hours trading starts at 4 p.m. U.S. Eastern Time after the major U.S. stock exchanges close. The after-hours trading session can run as late as 8 p.m., though volume typically thins out much earlier in the session. Trading in the after-hours is conducted through electronic communication networks (ECNs).",
-          "An asset is a resource with economic value that an individual, corporation, or country owns or controls with the expectation that it will provide a future benefit. Assets are reported on a company's balance sheet and are bought or created to increase a firm's value or benefit the firm's operations."
+          "An interest rate is either the cost of borrowing money or the reward for saving it. It is calculated as a percentage of the amount borrowed or saved.",
+          "You borrow money from banks when you take out a home mortgage. Other loans can be used for buying a car, an appliance, or paying for education.",
+          "Banks borrow money from you in the form of deposits, and interest is what they pay you for the use of the money deposited. They use the money from deposits to fund loans."
         ]
       },
       {
-        "wordName": "SecondCourse - Easy",
+        "wordName": "Investment",
         "wordId": 2,
         "isWordFinished": false,
         "description": [
-          "Bitcoin mining is the process of creating new bitcoin by solving puzzles. It consists of computing systems equipped with specialized chips competing to solve mathematical puzzles. The first bitcoin miner (as these systems are called) to solve the puzzle is rewarded with bitcoin.",
-          "Capitalism is an economic system in which private individuals or businesses own capital goods. The production of goods and services is based on supply and demand in the general market—known as a market economy—rather than through central planning—known as a planned economy or command economy.",
-          "A dividend is the distribution of some of a company's earnings to a class of its shareholders, as determined by the company's board of directors. Common shareholders of dividend-paying companies are typically eligible as long as they own the stock before the ex-dividend date."
+          "An investment is an asset or item acquired with the goal of generating income or appreciation.",
+          "Appreciation refers to an increase in the value of an asset over time. When an individual purchases a good as an investment, the intent is not to consume the good but rather to use it in the future to create wealth.",
+          "An investment always concerns the outlay of some capital today—time, effort, money, or an asset—in hopes of a greater payoff in the future than what was originally put in."
         ]
       },
       {
-        "wordName": "ThirdCourse - Easy",
+        "wordName": "Cash outflow",
         "wordId": 3,
         "isWordFinished": false,
         "description": [
-          "Hedge funds are actively managed investment pools whose managers use a wide range of strategies, often including buying with borrowed money and trading esoteric assets, in an effort to beat average investment returns for their clients. They are considered risky alternative investment choices.",
-          "Inflation is the decline of purchasing power of a given currency over time. A quantitative estimate of the rate at which the decline in purchasing power occurs can be reflected in the increase of an average price level of a basket of selected goods and services in an economy over some period of time.",
-          "Marketing refers to activities a company undertakes to promote the buying or selling of a product or service. Marketing includes advertising, selling, and delivering products to consumers or other businesses. Some marketing is done by affiliates on behalf of a company."
+          "In simple terms, the term cash outflow describes any money leaving a business. Obvious examples of cash outflow as experienced by a wide range of businesses include employees’ salaries, the maintenance of business premises and dividends that have to be paid to shareholders.",
+          "The opposite of cash outflow is cash inflow, which refers to the money coming into a business. If the cash outflow of a business is greater than the cash inflow, then the business can be said to be in a fairly bad state. ",
+          "Only by knowing what cash outflow is required for a business to operate can the owners be sure that the company has sufficient capital in place to carry on operating."
+        ]
+      },
+      {
+        "wordName": "Revenue",
+        "wordId": 4,
+        "isWordFinished": false,
+        "description": [
+          "Revenue is the total sales of a business within a reporting period.",
+          "It is a quantification of the gross activity generated by a business, which is the average unit price charged to customers, multiplied by the number of units sold.",
+          "Revenue is generally created when either goods or services are sold. However, it may also include other activities, such as the sale of memberships."
+        ]
+      },
+      {
+        "wordName": "Profit",
+        "wordId": 5,
+        "isWordFinished": false,
+        "description": [
+          "Profit is the surplus left from revenue after paying all costs. Profit is found by deducting total costs from revenue. In short: profit = total revenue - total costs.",
+          "For example, if a firm has a total revenue of £100,000 and a total cost of £80,000, then they are left with £20,000 profit.",
+          "Profit is the reward for risk-taking. A business can use profit to either reward owners, invest in growth, save for the future, in case there is a downturn in revenue."
+        ]
+      },
+      {
+        "wordName": "Loss",
+        "wordId": 6,
+        "isWordFinished": false,
+        "description": [
+          "Trading does not guarantee profit. A loss is made when the revenue from sales is not enough to cover all the costs of production.",
+          " For example, if a company has a total revenue of £60,000 and a total cost of £90,000, then they have lost £30,000 from trading.",
+          "Losses can be reduced or turned into profit by cutting costs or by increasing revenue."
+        ]
+      },
+      {
+        "wordName": "Debt",
+        "wordId": 7,
+        "isWordFinished": false,
+        "description": [
+          "Debt is an amount owed for funds borrowed. The lender agrees to lend funds to the borrower upon a promise by the borrower to pay interest on the debt, usually with the interest to be paid at regular intervals.",
+          "A person or business acquires debt in order to use the funds for operating needs or capital purchases.",
+          "In a business, debt may also be used as the source of funds for buying back shares in the business or to acquire another organization."
+        ]
+      },
+      {
+        "wordName": "Mortgage",
+        "wordId": 8,
+        "isWordFinished": false,
+        "description": [
+          "The term “mortgage” refers to a loan used to purchase or maintain a home, land, or other types of real estate.",
+          "The borrower agrees to pay the lender over time, typically in a series of regular payments that are divided into principal and interest. The property serves as collateral to secure the loan.",
+          "A borrower must apply for a mortgage through their preferred lender and ensure that they meet several requirements, including minimum credit scores and down payments."
         ]
       }
     ]
@@ -40,33 +90,103 @@
     "courseId": 2,
     "courseElements": [
       {
-        "wordName": "FirstCourse - Expert",
+        "wordName": "Compound interest",
         "wordId": 1,
         "isWordFinished": false,
         "description": [
-          "A null hypothesis is a type of statistical hypothesis that proposes that no statistical significance exists in a set of given observations. Hypothesis testing is used to assess the credibility of a hypothesis by using sample data. The null hypothesis, also known as the conjecture, is used in quantitative analysis to test theories about markets, investing strategies, or economies to decide if an idea is true or false.",
-          "The term racketeering broadly refers to criminal acts, typically those involving extortion. It is usually used in reference to patterns of illegal activity specified in the Racketeer Influenced and Corrupt Organizations Act (RICO). This is a U.S. federal law that makes it illegal to acquire or control a business through certain crimes or income from those crimes.",
-          "The term trust fund refers to an estate planning tool that establishes a legal entity to hold property or assets for a person or organization. Trust funds can hold a variety of assets, such as money, real property, stocks and bonds, a business, or a combination of many different types of properties or assets."
+          "Compound interest is interest on the amount of money you have deposited or borrowed.",
+          "When you’re investing or saving, compound interest is earned on the amount you deposited, plus any interest you’ve accumulated over time.",
+          "However, when you’re borrowing, compound interest is charged on the original amount you were loaned, as well as the interest charges that are added to your outstanding balance over time."
         ]
       },
       {
-        "wordName": "SecondCourse - Expert",
+        "wordName": "FICO score",
         "wordId": 2,
         "isWordFinished": false,
         "description": [
-          "The term xenocurrency refers to any currency that is traded in markets outside of its domestic borders. Its name derives from the Greek prefix xeno, meaning foreign.",
-          "Yield refers to the earnings generated and realized on an investment over a particular period of time. It's expressed as a percentage based on the invested amount, current market value, or face value of the security.",
-          "A zero-coupon bond, also known as an accrual bond, is a debt security that does not pay interest but instead trades at a deep discount, rendering a profit at maturity, when the bond is redeemed for its full face value."
+          "FICO is an acronym for Fair Isaac Corp., the company that came up with the methodology for calculating a credit score.",
+          "Your score is based on several factors, including payment history, the length of your credit history and total amount owed.",
+          "FICO scores range from 300 to 850, and the higher the score, the better the terms you may receive on your next loan or credit card. People with scores below 620 may have a harder time securing credit at a favorable interest rate."
         ]
       },
       {
-        "wordName": "ThirdCourse - Expert",
+        "wordName": "Net worth",
         "wordId": 3,
         "isWordFinished": false,
         "description": [
-          "The Zeta Model is a mathematical model that estimates the chances of a public company going bankrupt within a two-year time period. The number produced by the model is referred to as the company's Z-score (or zeta score) and is considered to be a reasonably accurate predictor of future bankruptcy.",
-          "A yield curve is a line that plots yields (interest rates) of bonds having equal credit quality but differing maturity dates. The slope of the yield curve gives an idea of future interest rate changes and economic activity.",
-          "A value chain is a business model that describes the full range of activities needed to create a product or service. For companies that produce goods, a value chain comprises the steps that involve bringing a product from conception to distribution, and everything in between—such as procuring raw materials, manufacturing functions, and marketing activities."
+          "Your net worth is simply the difference between your assets (what you own) and liabilities (what you owe).",
+          "You can calculate yours by adding up all of the money or investments you have, including the current market value of your home and car, as well as the balances in any checking, savings, retirement or other investment accounts.",
+          "Then subtract all of your debt, including your mortgage balance, credit card balances and any other loans or obligations. The resulting net worth number helps you take the pulse of your overall financial health."
+        ]
+      },
+      {
+        "wordName": "Asset allocation",
+        "wordId": 4,
+        "isWordFinished": false,
+        "description": [
+          "Asset allocation is where you choose to put your money.",
+          "The three major asset classes are stocks, bonds and cash (or cash equivalents). Each of these reacts differently to conditions in the market and economy, so be sure you choose those that line up best with your personal goals, risk tolerance and time horizon.",
+          "For example, investing in stocks could give you strong growth over time, but they can also be quite volatile. Thus, one of the most common pieces of investment advice out there is to diversify your portfolio — or put your money in several buckets to make sure you’re risking as little as possible while still achieving your particular goals."
+        ]
+      },
+      {
+        "wordName": "Capital gains",
+        "wordId": 5,
+        "isWordFinished": false,
+        "description": [
+          "Capital gains are the difference between how much something is worth now versus how much it was originally purchased for.",
+          "The gain, however, is only on paper until the asset or investment is actually sold. The flipside is a capital loss, which is the decrease in the asset’s or investment’s value since you purchased it.",
+          "You pay taxes on both short-term capital gains (a year or less) and long-term capital gains (more than a year) when you sell an investment."
+        ]
+      },
+      {
+        "wordName": "Rebalancing",
+        "wordId": 6,
+        "isWordFinished": false,
+        "description": [
+          "Rebalancing is a standard practice in any portfolio. It is the process of bringing your stocks and bonds back to your desired percentages.",
+          "For example, let’s say your target allocation is 60 percent stocks, 20 percent bonds and 20 percent cash. If the stock market has performed particularly well over the past year, your allocation may now have shifted to 70 percent stocks, 10 percent bonds and 20 percent cash.",
+          "To rebalance your portfolio, you could sell some of your stocks and reinvest that money in bonds, or invest new money in bonds to bring the portfolio back to the original balance."  
+        ]
+      },
+      {
+        "wordName": "Term life insurance",
+        "wordId": 7,
+        "isWordFinished": false,
+        "description": [
+          "Term life insurance, also known as pure life insurance, is a type of life insurance that guarantees payment of a stated death benefit if the covered person dies during a specified term.",
+          "Once the term expires, the policyholder can either renew it for another term, convert the policy to permanent coverage, or allow the term life insurance policy to terminate.",
+          "If you die within the set term, your beneficiaries receive a payout. If you don’t, the policy expires with no value. The policy owner can decide to renew coverage after the term is over and can cancel at any time without penalty."
+        ]
+      },
+      {
+        "wordName": "Stock options",
+        "wordId": 8,
+        "isWordFinished": false,
+        "description": [
+          "Stock options can be offered by companies as management incentives. These options give you the right (but not the obligation) to buy your employer’s stock at a pre-set price within a specified time period.",
+          "For example, if a manager helps boost the value of the company’s stock above the price of his or her option, the manager can buy the stock at the lower price and pocket the gain if they sell. But all shareholders benefit from the increased value of the stock.",
+          "There are two types of options: puts, which is a bet that a stock will fall, or calls, which is a bet that a stock will rise."
+        ]
+      },
+      {
+        "wordName": "Defined-contribution plans",
+        "wordId": 9,
+        "isWordFinished": false,
+        "description": [
+          "Essentially, they are retirement plans that companies may offer as a benefit in which you, your employer or both make contributions on a regular basis.",
+          "The money that goes into these accounts comes out of earnings pretax, so you don’t pay taxes on the amount you put away every year.",
+          "Qualified withdrawals from these (usually those you make at age 59½ or older) are taxed as ordinary income. The value of the retirement benefit is determined by its investment performance."
+        ]
+      },
+      {
+        "wordName": "Umbrella insurance",
+        "wordId": 10,
+        "isWordFinished": false,
+        "description": [
+          "Umbrella insurance provides additional liability coverage beyond what your home, auto or boat insurance may provide.",
+          "You might consider umbrella insurance if you’re at risk for being sued for property damage or other people’s injuries, such as a nanny or other employees who regularly work in your home.",
+          "It can also protect your assets if someone sues you for slander or defamation of character."  
         ]
       }
     ]
