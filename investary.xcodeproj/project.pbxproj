@@ -23,6 +23,8 @@
 		79C40F0F2836C9D10058B41B /* userService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C40F0E2836C9D10058B41B /* userService.swift */; };
 		79C40F112836CAC90058B41B /* json in Resources */ = {isa = PBXBuildFile; fileRef = 79C40F102836CAC90058B41B /* json */; };
 		79C40F132836CBBA0058B41B /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C40F122836CBBA0058B41B /* ProfileViewController.swift */; };
+		79F3D78D286AD69700789408 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F3D78C286AD69700789408 /* TableViewController.swift */; };
+		79F3D78F286B029400789408 /* detailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F3D78E286B029400789408 /* detailViewController.swift */; };
 		F8F511AD2836E61600709E38 /* courseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F511AC2836E61600709E38 /* courseService.swift */; };
 /* End PBXBuildFile section */
 
@@ -68,6 +70,8 @@
 		79C40F0E2836C9D10058B41B /* userService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = userService.swift; sourceTree = "<group>"; };
 		79C40F102836CAC90058B41B /* json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = json; sourceTree = SOURCE_ROOT; };
 		79C40F122836CBBA0058B41B /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		79F3D78C286AD69700789408 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		79F3D78E286B029400789408 /* detailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = detailViewController.swift; sourceTree = "<group>"; };
 		F8F511AC2836E61600709E38 /* courseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = courseService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -131,6 +135,8 @@
 				074496A727EC60D700F0BC12 /* RoundedButton.swift */,
 				07BF114727DB3F480050A318 /* RoundedCornerView.swift */,
 				0722679027DB3106004E1895 /* Main.storyboard */,
+				79F3D78E286B029400789408 /* detailViewController.swift */,
+				79F3D78C286AD69700789408 /* TableViewController.swift */,
 				0722679327DB3108004E1895 /* Assets.xcassets */,
 				0722679527DB3108004E1895 /* LaunchScreen.storyboard */,
 				0722679827DB3108004E1895 /* Info.plist */,
@@ -305,10 +311,12 @@
 				0722678B27DB3106004E1895 /* AppDelegate.swift in Sources */,
 				79C40F0F2836C9D10058B41B /* userService.swift in Sources */,
 				0722678D27DB3106004E1895 /* SceneDelegate.swift in Sources */,
+				79F3D78D286AD69700789408 /* TableViewController.swift in Sources */,
 				79C40F132836CBBA0058B41B /* ProfileViewController.swift in Sources */,
 				07BF114827DB3F480050A318 /* RoundedCornerView.swift in Sources */,
 				F8F511AD2836E61600709E38 /* courseService.swift in Sources */,
 				07962B4C27F6DC1300716F3A /* CourseViewController.swift in Sources */,
+				79F3D78F286B029400789408 /* detailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

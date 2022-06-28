@@ -1,0 +1,44 @@
+[
+    [investary.course.courseElements(wordName: Optional("Compound interest"), wordId: Optional(1), isWordFinished: Optional(false), description: [
+            "Compound interest is interest on the amount of money you have deposited or borrowed.",
+            "When you’re investing or saving, compound interest is earned on the amount you deposited, plus any interest you’ve accumulated over time.",
+            "However, when you’re borrowing, compound interest is charged on the original amount you were loaned, as well as the interest charges that are added to your outstanding balance over time."
+        ]), investary.course.courseElements(wordName: Optional("FICO score"), wordId: Optional(2), isWordFinished: Optional(false), description: [
+            "FICO is an acronym for Fair Isaac Corp., the company that came up with the methodology for calculating a credit score.",
+            "Your score is based on several factors, including payment history, the length of your credit history and total amount owed.",
+            "FICO scores range from 300 to 850, and the higher the score, the better the terms you may receive on your next loan or credit card. People with scores below 620 may have a harder time securing credit at a favorable interest rate."
+        ]), investary.course.courseElements(wordName: Optional("Net worth"), wordId: Optional(3), isWordFinished: Optional(false), description: [
+            "Your net worth is simply the difference between your assets (what you own) and liabilities (what you owe).",
+            "You can calculate yours by adding up all of the money or investments you have, including the current market value of your home and car, as well as the balances in any checking, savings, retirement or other investment accounts.",
+            "Then subtract all of your debt, including your mortgage balance, credit card balances and any other loans or obligations. The resulting net worth number helps you take the pulse of your overall financial health."
+        ]), investary.course.courseElements(wordName: Optional("Asset allocation"), wordId: Optional(4), isWordFinished: Optional(false), description: [
+            "Asset allocation is where you choose to put your money.",
+            "The three major asset classes are stocks, bonds and cash (or cash equivalents). Each of these reacts differently to conditions in the market and economy, so be sure you choose those that line up best with your personal goals, risk tolerance and time horizon.",
+            "For example, investing in stocks could give you strong growth over time, but they can also be quite volatile. Thus, one of the most common pieces of investment advice out there is to diversify your portfolio — or put your money in several buckets to make sure you’re risking as little as possible while still achieving your particular goals."
+        ]), investary.course.courseElements(wordName: Optional("Capital gains"), wordId: Optional(5), isWordFinished: Optional(false), description: [
+            "Capital gains are the difference between how much something is worth now versus how much it was originally purchased for.",
+            "The gain, however, is only on paper until the asset or investment is actually sold. The flipside is a capital loss, which is the decrease in the asset’s or investment’s value since you purchased it.",
+            "You pay taxes on both short-term capital gains (a year or less) and long-term capital gains (more than a year) when you sell an investment."
+        ]), investary.course.courseElements(wordName: Optional("Rebalancing"), wordId: Optional(6), isWordFinished: Optional(false), description: [
+            "Rebalancing is a standard practice in any portfolio. It is the process of bringing your stocks and bonds back to your desired percentages.",
+            "For example, let’s say your target allocation is 60 percent stocks, 20 percent bonds and 20 percent cash. If the stock market has performed particularly well over the past year, your allocation may now have shifted to 70 percent stocks, 10 percent bonds and 20 percent cash.",
+            "To rebalance your portfolio, you could sell some of your stocks and reinvest that money in bonds, or invest new money in bonds to bring the portfolio back to the original balance."
+        ]), investary.course.courseElements(wordName: Optional("Term life insurance"), wordId: Optional(7), isWordFinished: Optional(false), description: [
+            "Term life insurance, also known as pure life insurance, is a type of life insurance that guarantees payment of a stated death benefit if the covered person dies during a specified term.",
+            "Once the term expires, the policyholder can either renew it for another term, convert the policy to permanent coverage, or allow the term life insurance policy to terminate.",
+            "If you die within the set term, your beneficiaries receive a payout. If you don’t, the policy expires with no value. The policy owner can decide to renew coverage after the term is over and can cancel at any time without penalty."
+        ]), investary.course.courseElements(wordName: Optional("Stock options"), wordId: Optional(8), isWordFinished: Optional(false), description: [
+            "Stock options can be offered by companies as management incentives. These options give you the right (but not the obligation) to buy your employer’s stock at a pre-set price within a specified time period.",
+            "For example, if a manager helps boost the value of the company’s stock above the price of his or her option, the manager can buy the stock at the lower price and pocket the gain if they sell. But all shareholders benefit from the increased value of the stock.",
+            "There are two types of options: puts, which is a bet that a stock will fall, or calls, which is a bet that a stock will rise."
+        ]), investary.course.courseElements(wordName: Optional("Defined-contribution plans"), wordId: Optional(9), isWordFinished: Optional(false), description: [
+            "Essentially, they are retirement plans that companies may offer as a benefit in which you, your employer or both make contributions on a regular basis.",
+            "The money that goes into these accounts comes out of earnings pretax, so you don’t pay taxes on the amount you put away every year.",
+            "Qualified withdrawals from these (usually those you make at age 59½ or older) are taxed as ordinary income. The value of the retirement benefit is determined by its investment performance."
+        ]), investary.course.courseElements(wordName: Optional("Umbrella insurance"), wordId: Optional(10), isWordFinished: Optional(false), description: [
+            "Umbrella insurance provides additional liability coverage beyond what your home, auto or boat insurance may provide.",
+            "You might consider umbrella insurance if you’re at risk for being sued for property damage or other people’s injuries, such as a nanny or other employees who regularly work in your home.",
+            "It can also protect your assets if someone sues you for slander or defamation of character."
+        ])
+    ]
+]

@@ -17,6 +17,7 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var skillLevelLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
     
+   // var firstTime!: Bool = true
     
     
     
@@ -40,21 +41,18 @@ class ProfileViewController: UIViewController {
             
             
             self.courseCount = Int(courseData)
+                
+                
         
                
                 self.getUserData() { (profiles) -> () in
                     DispatchQueue.main.async {
-                        if(self.level == 1){
-                           // self.skillLevelLabel.text? = profiles.skillLevel!
-                        }
+                        
                             self.nameLabel.text? = profiles.name!
-                            self.skillLevelLabel.text? = profiles.skillLevel!
+                        self.skillLevelLabel.text? = profiles.skillLevel!
                         self.courseLevelLabel.text? = profiles.courses![self.courseCount].courseProgress!.description
                             self.quizLevelLabel.text? = profiles.quiz!.quizProgress!.description
                             self.libraryLevelLabel.text? = profiles.dictionary!.dictionaryProgress!.description
-                        
-
-                       
                     }
                 }
                 
@@ -64,6 +62,7 @@ class ProfileViewController: UIViewController {
                 if(self.courseCount == 0){
                     print("level: " + String(self.level))
                     self.level = 1;
+                    
                 }
             }
             
