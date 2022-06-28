@@ -21,6 +21,10 @@ class ViewController: UIViewController {
         self.navigationItem.hidesBackButton = true
             
         }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.tabBarController?.tabBar.isTranslucent = false
+    }
 }
 
     

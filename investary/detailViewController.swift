@@ -11,29 +11,12 @@ class detailViewController: UIViewController {
     
     var coursePartCounter: Int! = 0
     
-    @IBOutlet weak var continueButtonText: RoundedButton!
     @IBOutlet weak var termLabel: UILabel!
     
     @IBOutlet weak var descriptionLabel: UITextView!
     
-    @IBAction func continueButton(_ sender: Any) {
-        if coursePartCounter == 1 {
-            continueButtonText.setTitle("finish", for: .normal)
-        }else if coursePartCounter >= 2{
-            coursePartCounter = 0
-            DispatchQueue.main.async {
-                self.performSegue(withIdentifier: "finishSegue2", sender: self)
-            }
-            
-        }
-        coursePartCounter = coursePartCounter + 1
-        viewWillAppear(true)
-    }
-    
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        self.tabBarController?.tabBar.isHidden = false
-    }
+    var wholeDescription = String()
+
     
     var terms = [course.courseElements]()
     var row = Int()
@@ -44,7 +27,7 @@ class detailViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         self.termLabel?.text = terms[row.self].wordName
-        self.descriptionLabel?.text = terms[row.self].description[coursePartCounter]
+        self.descriptionLabel?.text = terms[row.self].description[0]+" "+terms[row.self].description[1]+" "+terms[row.self].description[2]
     }
     
     func setData(rowV: Int, termsV: [course.courseElements]){

@@ -11,7 +11,6 @@ class ProfileViewController: UIViewController {
     var level: Int! = 0
     var courseCount: Int!
     
-    @IBOutlet weak var libraryLevelLabel: UILabel!
     @IBOutlet weak var quizLevelLabel: UILabel!
     @IBOutlet weak var courseLevelLabel: UILabel!
     @IBOutlet weak var skillLevelLabel: UILabel!
@@ -52,7 +51,7 @@ class ProfileViewController: UIViewController {
                         self.skillLevelLabel.text? = profiles.skillLevel!
                         self.courseLevelLabel.text? = profiles.courses![self.courseCount].courseProgress!.description
                             self.quizLevelLabel.text? = profiles.quiz!.quizProgress!.description
-                            self.libraryLevelLabel.text? = profiles.dictionary!.dictionaryProgress!.description
+                            
                     }
                 }
                 
